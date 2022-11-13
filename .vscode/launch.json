@@ -1,0 +1,62 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Compile, Upload and Connect",
+            "cwd": ".",
+            "type": "cppdbg",
+            "request": "launch",
+            "preLaunchTask": "upload code to arduino",
+            "program": "/bin/minicom",
+            "args": [
+                "-b",
+                "38400",
+                "-D",
+                "/dev/ttyACM0",
+                "-s"
+            ]
+        }, 
+        {
+            "name": "Connect HEX",
+            "cwd": ".",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/bin/minicom",
+            "args": [
+                "-b",
+                "38400",
+                "-w",
+                "-H",
+                "-D",
+                "/dev/ttyACM0",
+                "-s"
+            ]
+        },
+        {
+            "name": "Connect",
+            "cwd": ".",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/bin/minicom",
+            "args": [
+                "-b",
+                "38400",
+                "-w",
+                "-D",
+                "/dev/ttyACM0",
+                "-s"
+            ]
+        },
+        {
+            "name": "Compile and Upload",
+            "cwd": ".",
+            "type": "cppdbg",
+            "request": "launch",
+            "preLaunchTask": "upload code to arduino",
+            "program": "",
+        }   
+    ]
+}

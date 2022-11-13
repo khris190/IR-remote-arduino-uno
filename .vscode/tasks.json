@@ -1,0 +1,51 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "upload code to arduino",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "upload"
+            ],
+            "problemMatcher": [
+                "$eslint-stylish"
+            ]
+        },
+        {
+            "label": "create hex",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "build_hex"
+            ],
+            "problemMatcher": [
+                "$eslint-stylish"
+            ]
+        },
+        {
+            "label": "create exe",
+            "type": "shell",
+            "command": "make_exe",
+            "args": [
+                "build_exe"
+            ],
+            "problemMatcher": [
+                "$eslint-stylish"
+            ]
+        },
+        {
+            "label": "create obj",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "build_obj"
+            ],
+            "problemMatcher": [
+                "$eslint-stylish"
+            ]
+        },
+    ]
+  }
